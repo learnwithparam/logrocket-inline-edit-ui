@@ -13,7 +13,7 @@ function App() {
     <div className="w-full max-w-md mx-auto bg-gray-800">
       <form className=" bg-white rounded px-8 py-8 pt-8">
         <div className="px-4 pb-4">
-          <h1 className="uppercase font-bold text-3xl">Asana inline edit UI</h1>
+          <h1 className="uppercase font-bold text-xl">Asana inline edit UI</h1>
         </div>
         <div className="px-4 pb-4">
           <Editable

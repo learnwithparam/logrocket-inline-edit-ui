@@ -29,7 +29,10 @@ const Editable = ({ text, placeholder, children, childRef, ...props }) => {
           {children}
         </div>
       ) : (
-        <div onClick={() => setEditing(true)}>
+        <div
+          className="rounded py-2 px-3 text-gray-700 leading-tight hover:shadow-outline"
+          onClick={() => setEditing(true)}
+        >
           {text || placeholder || "Editable content"}
         </div>
       )}
