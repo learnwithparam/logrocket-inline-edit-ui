@@ -10,16 +10,19 @@ function App() {
   const [description, setDescription] = useState("");
 
   return (
-    <div className="w-full max-w-md mx-auto bg-gray-800">
+    <div className="w-full max-w-md mx-auto">
       <form className=" bg-white rounded px-8 py-8 pt-8">
         <div className="px-4 pb-4">
-          <h1 className="uppercase font-bold text-xl">Asana inline edit UI</h1>
+          <h1 className="uppercase py-2 px-3 font-bold text-xl">
+            Inline Editable UI
+          </h1>
         </div>
         <div className="px-4 pb-4">
           <Editable
             text={task}
             placeholder="Write a task name"
             childRef={inputRef}
+            type="input"
           >
             <input
               ref={inputRef}
@@ -37,6 +40,7 @@ function App() {
             text={description}
             placeholder="Description for the task"
             childRef={textareaRef}
+            type="textarea"
           >
             <textarea
               ref={textareaRef}

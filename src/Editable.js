@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./Editable.css";
 
-const Editable = ({ text, placeholder, children, childRef, ...props }) => {
+const Editable = ({
+  text,
+  type,
+  placeholder,
+  children,
+  childRef,
+  ...props
+}) => {
   const [isEditing, setEditing] = useState(false);
 
   useEffect(() => {
@@ -30,7 +37,7 @@ const Editable = ({ text, placeholder, children, childRef, ...props }) => {
         </div>
       ) : (
         <div
-          className="rounded py-2 px-3 text-gray-700 leading-tight hover:shadow-outline"
+          className={`rounded py-2 px-3 text-gray-700 leading-tight hover:shadow-outline editable-${type}`}
           onClick={() => setEditing(true)}
         >
           {text || placeholder || "Editable content"}
